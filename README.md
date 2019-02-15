@@ -11,9 +11,3 @@ Remerciement à **Bastien Calou** et **Raphaël Marquand** pour pour leur consei
 
 [Lien du site internet](https://runhetic.netlify.com/)
 
-***
-<div align="center">
-<img src="../assets/hetic-logo.png" width="200">
-</div>
-
-***
