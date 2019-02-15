@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Runhetic</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="assets/favicons/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="scss/styles.scss" />
+  </head>
+  <body>
+    <div class="game">
+      <iframe src="assets/sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+      <audio class="game-sound" preload autoplay loop>
+        <source src="assets/sounds/theme.mp3" type="audio/mp3" />
+      </audio>
+      <audio class="jump-sound">
+          <source src="assets/sounds/jump.wav" type="audio/wav" />
+      </audio>
+      <audio class="winPoint-sound">
+          <source src="assets/sounds/jump.wav" type="audio/wav" />
+      </audio>
+      <audio class="losePoint-sound">
+          <source src="assets/sounds/lose-instant.wav" type="audio/wav" />
+      </audio>
+      <audio class="winGame-sound">
+          <source src="assets/sounds/win-game.wav" type="audio/wav" />
+      </audio>
+      <audio class="loseGame-sound">
+          <source src="assets/sounds/game-over.wav" type="audio/wav" />
+      </audio>
+      <div class="game__container">
+        <div class="game__start">
+          <div class="screen__logo">
+            <img
+              class="screen__logo--img"
+              src="assets/images/logorunhetic.png"
+              alt="logo"
+            />
+          </div>
+          <nav class="menu">
+            <div class="popup">
+              <img
+                class="menu__list"
+                src="assets/images/setting__button.svg"
+                alt="settings"
+              />
+            </div>
+            <div class="popuptext" id="myPopup">
+              <span>Reglages</span>
+              <div class="popuptext__content">
+                <span class="popuptext__content--sound">SOUNDS : ON</span>
+                <span class="popuptext__content--credits">CREDITS</span>
+              </div>
+              <div class="popuptext__credits">
+                <span>Arthur BARRE</span> <span>Cassandra DOUX</span>
+                <span>Benjamin KICHENAMOURTY</span> <span>Julien LEFORT</span>
+                <span>Héléne MARGARY</span>
+                <span>A project school for HETIC</span>
+              </div>
+            </div>
+          </nav>
+          <div class="player__select player__select--man"></div>
+          <div class="button__play">
+            <img
+              class="button__play--img"
+              src="assets/images/play-button.svg"
+              alt="buttonplay"
+            />
+            <p class="button__play--text">Jouer</p>
+          </div>
+          <div class="button__carrousel">
+            <p class="button__carrousel--text">Berni</p>
+          </div>
+        </div>
+        <div class="game__inGame">
+          <div class="game__button--settings buttonPause"></div>
+          <div class="game__score"></div>
+          <div class="game__quizz game__quizz1">
+            <span class="game__quizz__question question"
+              >Laquelle de ces règles CSS permet de modifier l’apparence d’un
+              lien déjà visité ?</span
+            >
+            <div
+              class="question__answer question__answer1 question__answer-false"
+            >
+              <span>a:focus</span>
+            </div>
+            <div
+              class="question__answer question__answer1 question__answer-false"
+            >
+              <span>a:consulted</span>
+            </div>
+            <div
+              class="question__answer question__answer1 question__answer-true"
+            >
+              <span>a:visited</span>
+            </div>
+          </div>
+          <div class="game__quizz game__quizz2">
+            <span class="game__quizz__question question"
+              >Quel attribut dois-je utiliser si je veux fusionner deux cellules
+              d’une même ligne dans un tableau ?</span
+            >
+            <div
+              class="question__answer question__answer2 question__answer-true"
+            >
+              <span>colspan</span>
+            </div>
+            <div
+              class="question__answer question__answer2 question__answer-false"
+            >
+              <span>fusion</span>
+            </div>
+            <div
+              class="question__answer question__answer2 question__answer-false"
+            >
+              <span>groupline</span>
+            </div>
+          </div>
+          <div class="game__end"><span class="finalScore"></span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
